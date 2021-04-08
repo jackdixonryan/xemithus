@@ -14,10 +14,10 @@
 <section>
 	<h3>Quick Links</h3>
 	<ul>
-		<li><a href="/sign-up">Get Started</a></li>
-		<li><a href="/contracts">Look at the Contract Board</a></li>
-		<li><a href="/ledger">Peruse the Ledger</a></li>
-		<li><a href="/about">About the Creators</a></li>
+		<li><a href="/sign-up" id="sign-up">Get Started</a></li>
+		<li><a href="/contracts" id="contracts">Look at the Contract Board</a></li>
+		<li><a href="/ledger" id="ledger">Peruse the Ledger</a></li>
+		<li><a href="/about" id="about">About the Creators</a></li>
 	</ul>
 </section>
 <section>
