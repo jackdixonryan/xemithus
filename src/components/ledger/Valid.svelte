@@ -1,10 +1,8 @@
 <script>
-  export let valid;
-  export let chainLength;
-
-  console.log(valid);
+  import { chainLength, chainValidity } from "../../stores/chain";
 </script>
 
+{#if $chainLength > 0}
 <figure
   id="cards-and-whatnot"
   class="flex-auto md:flex shadow rounded-xl p-8 md:p-0 bg-white"
@@ -13,12 +11,12 @@
     <h2 class="text-lg font-medium uppercase text-gray-700">Status</h2>
     <div>
       <p class="text-sm font-medium uppercase text-gray-700">
-        {chainLength} Block
-        {#if chainLength !== 1}
+        {$chainLength} Block
+        {#if $chainLength !== 1}
           <span class="inline">s</span>
         {/if}
       </p>
-      {#if valid}
+      {#if $chainValidity}
         <div
           class="rounded-full h-6 w-6 flex items-center justify-center bg-green-700"
         >
@@ -36,3 +34,4 @@
     </div>
   </div>
 </figure>
+{/if}

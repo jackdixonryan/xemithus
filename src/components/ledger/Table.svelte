@@ -1,7 +1,9 @@
 <script>
-  export let chain;
+  // import { chain } from "../../stores/stores";
+  import { chain } from "../../stores/chain";
 </script>
 
+{#if $chain && $chain.length > 0}
 <section class="flex-auto px-3 py-3">
   <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
     <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
@@ -37,7 +39,7 @@
             >
           </thead>
           <tbody class="bg-white divide-y divide-gray-200">
-            {#each chain as block}
+            {#each $chain as block}
               <tr>
                 <td class="px-6 py-4 whitespace-nowrap">{block.index}</td>
                 <td class="px-6 py-4 whitespace-nowrap">{block.timestamp}</td>
@@ -56,3 +58,4 @@
     </div>
   </div>
 </section>
+{/if}
