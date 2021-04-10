@@ -7,12 +7,14 @@
     "export": "sapper export --legacy",
     "start": "node __sapper__/build",
     "cypress:open": "cypress open",
+    "go": "npm run watch:tailwind && npm run dev",
     "watch:tailwind": "postcss static/tailwind.css -o static/index.css -w",
-    "build:tailwind": "NODE_ENV=production postcss static/tailwind.css -o static/index.css" ,
+    "build:tailwind": "NODE_ENV=production postcss static/tailwind.css -o static/index.css",
     "build": "npm run build:tailwind && sapper build --legacy"
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^4.0.3",
+    "axios": "^0.21.1",
     "compression": "^1.7.1",
     "polka": "next",
     "sirv": "^1.0.0"
@@ -28,6 +30,7 @@
     "@rollup/plugin-node-resolve": "^8.0.0",
     "@rollup/plugin-replace": "^2.4.0",
     "@rollup/plugin-url": "^5.0.0",
+    "autoprefixer": "^10.2.5",
     "cypress": "^7.0.0",
     "postcss-cli": "^8.3.1",
     "rollup": "^2.3.4",
