@@ -6,6 +6,6 @@
 
 <Nav {segment}/>
 
-<main class="bg-gray-700">
+<main class="bg-gray-100 h-screen">
 	<slot></slot>
 </main>
